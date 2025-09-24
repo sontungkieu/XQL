@@ -5,9 +5,11 @@
 ### Install dependencies
 
 These are the same setup instructions as in [Implicit Q-Learning](https://github.com/ikostrikov/implicit_q_learning).
+cài lại cuda về 11.8
 
 ```bash
 uv sync --extra-index-url https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/
+
 pip install --upgrade pip
 
 pip install -r requirements.txt
@@ -22,17 +24,17 @@ Also, see other configurations for CUDA [here](https://github.com/google/jax#pip
 
 Locomotion
 ```bash
-python train_offline.py --env_name=halfcheetah-medium-expert-v2 --config=configs/mujoco_config.py --max_clip=5 --sample_random_times=1 --temp=1
+uv run train_offline.py --env_name=halfcheetah-medium-expert-v2 --config=configs/mujoco_config.py --max_clip=5 --sample_random_times=1 --temp=1
 ```
 
 AntMaze
 ```bash
-python train_offline.py --env_name=antmaze-large-play-v0 --config=configs/antmaze_config.py --eval_episodes=100 --eval_interval=100000  --max_clip=5  --temp=0.8
+uv run train_offline.py --env_name=antmaze-large-play-v0 --config=configs/antmaze_config.py --eval_episodes=100 --eval_interval=100000  --max_clip=5  --temp=0.8
 ```
 
 Kitchen and Adroit
 ```bash
-python train_offline.py --env_name=pen-human-v0 --config=configs/kitchen_config.py --max_clip=5 --sample_random_times=1 --temp=8
+uv run train_offline.py --env_name=pen-human-v0 --config=configs/kitchen_config.py --max_clip=5 --sample_random_times=1 --temp=8
 ```
 
 Finetuning on AntMaze tasks
