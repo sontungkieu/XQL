@@ -26,6 +26,7 @@ dependencies = [
     "d4rl @ git+https://github.com/rail-berkeley/d4rl@master#egg=d4rl",
     "wandb<0.19.12",
     "tensorboardX",
+    "cython <3, >=0.29",  # Pin to fix MuJoCo-py build; <3 avoids noexcept conflict
 ]
 
 # Removed [build-system] to skip editable install/build; uv sync will only install dependencies.
