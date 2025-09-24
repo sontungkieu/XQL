@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "xql-offline" 
+version = "0.1.0"  # Added this to fix the parse error
 description = "Project generated from pinned requirements"
 readme = "README.md"
 authors = [{ name = "Your Name" }]
