@@ -445,6 +445,18 @@ wheels = [
 ]
 
 [[package]]
+name = "docker-pycreds"
+version = "0.4.0"
+source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/docker-pycreds/docker-pycreds-0.4.0.tar.gz", hash = "sha256:6ce3270bcaf404cc4c3e27e4b6c70d3521deae82fb508767870fdbf772d584d4" }
+wheels = [
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/docker-pycreds/docker_pycreds-0.4.0-py2.py3-none-any.whl", hash = "sha256:7266112468627868005106ec19cd0d722702d2b7d5912a28e19b826c3d37af49" },
+]
+
+[[package]]
 name = "etils"
 version = "1.3.0"
 source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
@@ -1363,74 +1375,26 @@ wheels = [
 ]
 
 [[package]]
-name = "my-project"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "absl-py" },
-    { name = "d4rl" },
-    { name = "flax" },
-    { name = "gdown" },
-    { name = "gym" },
-    { name = "imageio" },
-    { name = "imageio-ffmpeg" },
-    { name = "jax" },
-    { name = "jaxlib", version = "0.3.15", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "sys_platform == 'darwin'" },
-    { name = "jaxlib", version = "0.3.15+cuda11.cudnn82", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "sys_platform != 'darwin'" },
-    { name = "ml-collections" },
-    { name = "numpy" },
-    { name = "optax" },
-    { name = "scipy" },
-    { name = "tensorboard" },
-    { name = "tensorboardx" },
-    { name = "tensorflow-probability" },
-    { name = "tqdm" },
-    { name = "wandb" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "absl-py", specifier = ">=0.12.0" },
-    { name = "d4rl", git = "https://github.com/rail-berkeley/d4rl?rev=master" },
-    { name = "flax", specifier = ">=0.3.5" },
-    { name = "gdown", specifier = ">=3.12.2" },
-    { name = "gym", extras = ["mujoco-py"], specifier = "<=0.24.1" },
-    { name = "imageio", specifier = ">=2.9.0" },
-    { name = "imageio-ffmpeg", specifier = ">=0.4.3" },
-    { name = "jax", specifier = "<=0.3.15" },
-    { name = "jaxlib", specifier = "<=0.3.15" },
-    { name = "ml-collections", specifier = ">=0.1.0" },
-    { name = "numpy", specifier = ">=1.20.2" },
-    { name = "optax", specifier = ">=0.0.6" },
-    { name = "scipy", specifier = ">=1.6.0" },
-    { name = "tensorboard" },
-    { name = "tensorboardx" },
-    { name = "tensorflow-probability", specifier = ">=0.14.1" },
-    { name = "tqdm", specifier = ">=4.60.0" },
-    { name = "wandb" },
-]
-
-[[package]]
 name = "numpy"
-version = "1.24.4"
+version = "1.24.3"
 source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
-sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4.tar.gz", hash = "sha256:80f5e3a4e498641401868df4208b74581206afbee7cf7b8329daae82676d9463" }
+sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3.tar.gz", hash = "sha256:ab344f1bf21f140adab8e47fdbc7c35a477dc01408791f8ba00d018dd0bc5155" }
 wheels = [
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:1452241c290f3e2a312c137a9999cdbf63f78864d63c79039bda65ee86943f61" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:04640dab83f7c6c85abf9cd729c5b65f1ebd0ccf9de90b270cd61935eef0197f" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a5425b114831d1e77e4b5d812b69d11d962e104095a5b9c3b641a218abcc050e" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dd80e219fd4c71fc3699fc1dadac5dcf4fd882bfc6f7ec53d30fa197b8ee22dc" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp38-cp38-win32.whl", hash = "sha256:4602244f345453db537be5314d3983dbf5834a9701b7723ec28923e2889e0bb2" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp38-cp38-win_amd64.whl", hash = "sha256:692f2e0f55794943c5bfff12b3f56f99af76f902fc47487bdfe97856de51a706" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:2541312fbf09977f3b3ad449c4e5f4bb55d0dbf79226d7724211acc905049400" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:9667575fb6d13c95f1b36aca12c5ee3356bf001b714fc354eb5465ce1609e62f" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f3a86ed21e4f87050382c7bc96571755193c4c1392490744ac73d660e8f564a9" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d11efb4dbecbdf22508d55e48d9c8384db795e1b7b51ea735289ff96613ff74d" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp39-cp39-win32.whl", hash = "sha256:6620c0acd41dbcb368610bb2f4d83145674040025e5536954782467100aa8835" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-cp39-cp39-win_amd64.whl", hash = "sha256:befe2bf740fd8373cf56149a5c23a0f601e82869598d41f8e188a0e9869926f8" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:31f13e25b4e304632a4619d0e0777662c2ffea99fcae2029556b17d8ff958aef" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:95f7ac6540e95bc440ad77f56e520da5bf877f87dca58bd095288dce8940532a" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.4-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:e98f220aa76ca2a977fe435f5b04d7b3470c0a2e6312907b37ba6068f26787f2" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:7776ea65423ca6a15255ba1872d82d207bd1e09f6d0894ee4a64678dd2204078" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:ae8d0be48d1b6ed82588934aaaa179875e7dc4f3d84da18d7eae6eb3f06c242c" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ecde0f8adef7dfdec993fd54b0f78183051b6580f606111a6d789cd14c61ea0c" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4749e053a29364d3452c034827102ee100986903263e89884922ef01a0a6fd2f" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp38-cp38-win32.whl", hash = "sha256:d933fabd8f6a319e8530d0de4fcc2e6a61917e0b0c271fded460032db42a0fe4" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp38-cp38-win_amd64.whl", hash = "sha256:56e48aec79ae238f6e4395886b5eaed058abb7231fb3361ddd7bfdf4eed54289" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:4719d5aefb5189f50887773699eaf94e7d1e02bf36c1a9d353d9f46703758ca4" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:0ec87a7084caa559c36e0a2309e4ecb1baa03b687201d0a847c8b0ed476a7187" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ea8282b9bcfe2b5e7d491d0bf7f3e2da29700cec05b49e64d6246923329f2b02" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:210461d87fb02a84ef243cac5e814aad2b7f4be953b32cb53327bb49fd77fbb4" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp39-cp39-win32.whl", hash = "sha256:784c6da1a07818491b0ffd63c6bbe5a33deaa0e25a20e1b3ea20cf0e43f8046c" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-cp39-cp39-win_amd64.whl", hash = "sha256:d5036197ecae68d7f491fcdb4df90082b0d4960ca6599ba2659957aafced7c17" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-pp38-pypy38_pp73-macosx_10_9_x86_64.whl", hash = "sha256:352ee00c7f8387b44d19f4cada524586f07379c0d49270f87233983bc5087ca0" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1a7d6acc2e7524c9955e5c903160aa4ea083736fde7e91276b0e5d98e6332812" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/numpy/numpy-1.24.3-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:35400e6a8d102fd07c71ed7dcadd9eb62ee9a6e84ec159bd48c28235bbb0f8e4" },
 ]
 
 [[package]]
@@ -1596,6 +1560,22 @@ wheels = [
     { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/protobuf/protobuf-6.32.1-cp39-abi3-manylinux2014_aarch64.whl", hash = "sha256:2f5b80a49e1eb7b86d85fcd23fe92df154b9730a725c3b38c4e43b9d77018bf4" },
     { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/protobuf/protobuf-6.32.1-cp39-abi3-manylinux2014_x86_64.whl", hash = "sha256:b1864818300c297265c83a4982fd3169f97122c299f56a56e2445c3698d34710" },
     { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/protobuf/protobuf-6.32.1-py3-none-any.whl", hash = "sha256:2601b779fc7d32a866c6b4404f9d42a3f67c5b9f3f15b4db3cccabe06b95c346" },
+]
+
+[[package]]
+name = "psutil"
+version = "7.1.0"
+source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
+sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0.tar.gz", hash = "sha256:655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2" }
+wheels = [
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp36-abi3-macosx_10_9_x86_64.whl", hash = "sha256:76168cef4397494250e9f4e73eb3752b146de1dd950040b29186d0cce1d5ca13" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp36-abi3-macosx_11_0_arm64.whl", hash = "sha256:5d007560c8c372efdff9e4579c2846d71de737e4605f611437255e81efcca2c5" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp36-abi3-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:22e4454970b32472ce7deaa45d045b34d3648ce478e26a04c7e858a0a6e75ff3" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8c70e113920d51e89f212dd7be06219a9b88014e63a4cec69b684c327bc474e3" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7d4a113425c037300de3ac8b331637293da9be9713855c4fc9d2d97436d7259d" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp37-abi3-win32.whl", hash = "sha256:09ad740870c8d219ed8daae0ad3b726d3bf9a028a198e7f3080f6a1888b99bca" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp37-abi3-win_amd64.whl", hash = "sha256:57f5e987c36d3146c0dd2528cd42151cf96cd359b9d67cfff836995cc5df9a3d" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/psutil/psutil-7.1.0-cp37-abi3-win_arm64.whl", hash = "sha256:6937cb68133e7c97b6cc9649a570c9a18ba0efebed46d8c5dae4c07fa1b67a07" },
 ]
 
 [[package]]
@@ -1970,6 +1950,34 @@ wheels = [
 ]
 
 [[package]]
+name = "setproctitle"
+version = "1.3.7"
+source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
+sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7.tar.gz", hash = "sha256:bc2bc917691c1537d5b9bca1468437176809c7e11e5694ca79a9ca12345dcb9e" }
+wheels = [
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-macosx_10_9_universal2.whl", hash = "sha256:376761125ab5dab822d40eaa7d9b7e876627ecd41de8fa5336713b611b47ccef" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:2a4e03bd9aa5d10b8702f00ec1b740691da96b5003432f3000d60c56f1c2b4d3" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:47d36e418ab86b3bc7946e27155e281a743274d02cd7e545f5d628a2875d32f9" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:a74714ce836914063c36c8a26ae11383cf8a379698c989fe46883e38a8faa5be" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:f2ae6c3f042fc866cc0fa2bc35ae00d334a9fa56c9d28dfc47d1b4f5ed23e375" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-musllinux_1_2_aarch64.whl", hash = "sha256:be7e01f3ad8d0e43954bebdb3088cb466633c2f4acdd88647e7fbfcfe9b9729f" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-musllinux_1_2_ppc64le.whl", hash = "sha256:35a2cabcfdea4643d7811cfe9f3d92366d282b38ef5e7e93e25dafb6f97b0a59" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-musllinux_1_2_x86_64.whl", hash = "sha256:8ce2e39a40fca82744883834683d833e0eb28623752cc1c21c2ec8f06a890b39" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-win32.whl", hash = "sha256:6f1be447456fe1e16c92f5fb479404a850d8f4f4ff47192fde14a59b0bae6a0a" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp38-cp38-win_amd64.whl", hash = "sha256:5ce2613e1361959bff81317dc30a60adb29d8132b6159608a783878fc4bc4bbc" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:deda9d79d1eb37b688729cac2dba0c137e992ebea960eadb7c2c255524c869e0" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:a93e4770ac22794cfa651ee53f092d7de7105c76b9fc088bb81ca0dcf698f704" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl", hash = "sha256:134e7f66703a1d92c0a9a0a417c580f2cc04b93d31d3fc0dd43c3aa194b706e1" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:9796732a040f617fc933f9531c9a84bb73c5c27b8074abbe52907076e804b2b7" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-manylinux2014_ppc64le.manylinux_2_17_ppc64le.manylinux_2_28_ppc64le.whl", hash = "sha256:ff3c1c32382fb71a200db8bab3df22f32e6ac7ec3170e92fa5b542cf42eed9a2" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-musllinux_1_2_aarch64.whl", hash = "sha256:01f27b5b72505b304152cb0bd7ff410cc4f2d69ac70c21a7fdfa64400a68642d" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-musllinux_1_2_ppc64le.whl", hash = "sha256:80b6a562cbc92b289c28f34ce709a16b26b1696e9b9a0542a675ce3a788bdf3f" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:c4fb90174d176473122e7eef7c6492d53761826f34ff61c81a1c1d66905025d3" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-win32.whl", hash = "sha256:c77b3f58a35f20363f6e0a1219b367fbf7e2d2efe3d2c32e1f796447e6061c10" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/setproctitle/setproctitle-1.3.7-cp39-cp39-win_amd64.whl", hash = "sha256:318ddcf88dafddf33039ad41bc933e1c49b4cb196fe1731a209b753909591680" },
+]
+
+[[package]]
 name = "setuptools"
 version = "75.3.2"
 source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
@@ -2264,36 +2272,42 @@ wheels = [
 
 [[package]]
 name = "wandb"
-version = "0.22.0"
+version = "0.19.11"
 source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }
 dependencies = [
     { name = "click" },
+    { name = "docker-pycreds" },
     { name = "eval-type-backport" },
     { name = "gitpython" },
-    { name = "packaging" },
     { name = "platformdirs", version = "4.3.6", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version < '3.9' or sys_platform != 'linux'" },
     { name = "platformdirs", version = "4.4.0", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version >= '3.9' and sys_platform == 'linux'" },
     { name = "protobuf", version = "5.29.5", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version < '3.9' or sys_platform != 'linux'" },
     { name = "protobuf", version = "6.32.1", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version >= '3.9' and sys_platform == 'linux'" },
+    { name = "psutil" },
     { name = "pydantic", version = "2.10.6", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version < '3.9' or sys_platform != 'linux'" },
     { name = "pydantic", version = "2.11.9", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version >= '3.9' and sys_platform == 'linux'" },
     { name = "pyyaml" },
     { name = "requests", version = "2.32.4", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version < '3.9' or sys_platform != 'linux'" },
     { name = "requests", version = "2.32.5", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version >= '3.9' and sys_platform == 'linux'" },
     { name = "sentry-sdk" },
+    { name = "setproctitle" },
+    { name = "setuptools", version = "75.3.2", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version < '3.9' or sys_platform != 'linux'" },
+    { name = "setuptools", version = "80.9.0", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version >= '3.9' and sys_platform == 'linux'" },
     { name = "typing-extensions", version = "4.13.2", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version < '3.9' or sys_platform != 'linux'" },
     { name = "typing-extensions", version = "4.15.0", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "python_full_version >= '3.9' and sys_platform == 'linux'" },
 ]
-sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0.tar.gz", hash = "sha256:717e3d085f8f57dbde745c9ec6d605e51b2da51e47a7d2a7bfa82c9c6e3d3f5a" }
+sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11.tar.gz", hash = "sha256:3f50a27dfadbb25946a513ffe856c0e8e538b5626ef207aa50b00c3b0356bff8" }
 wheels = [
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-macosx_12_0_arm64.whl", hash = "sha256:8650a14615c23dcfc8cf393f88d41a879d6bfffb3c290a556aeb6ee62986c359" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-macosx_12_0_x86_64.whl", hash = "sha256:94ec449b3ed9516cad7008ab37c55b299d0036cdadfa83688b7245bd6ba04dd3" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4b2fe78b5f2d1ec7396f7925c7ac33f04ea0a62f07779cb654c45633d17dfc45" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:44da9a83301d89c008f608832b74237f9e0a0758b2bb6d69ba51652818fffb5e" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:21f05cc609c62c8ccba7c3338f9288d723c64d16ffd4fa70c02d6db60b42abae" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:884d37fb8d4daeb4d1f68ad8b5ea2817cabecc715efaff2f89bf006f2e977e37" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-win32.whl", hash = "sha256:60776fae528c3f64caf47a94dec08899c308f96fe974e0a82cefddb9a65e223c" },
-    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.22.0-py3-none-win_amd64.whl", hash = "sha256:53ba0fa048b766c1aa44592f1e530fb7eead7749089a66c3892b35f153a8d8bd" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-any.whl", hash = "sha256:ff3bf050ba25ebae7aedc9a775ffab90c28068832edfe5458423f488c2558f82" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:0823fd9aa6343f40c04e01959997ca8c6d6adf1bd81c8d45261fa4915f1c6b67" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-macosx_11_0_arm64.whl", hash = "sha256:c758ef5439599d9023db5b3cf1698477055d82f9fae48af2779f63f1d289167c" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-macosx_11_0_x86_64.whl", hash = "sha256:de2dfd4911e7691735e271654c735e7b90cdee9d29a3796fbf06e9e92d48f3d7" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:cfff738850770d26b13f8f3fe400a6456f1e39e87f3f29d5aa241b249476df95" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e8ff673007448df11cc69379ae0df28ead866800dc1ec7bc151b402db0bbcf40" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:858bc5023fa1b3285d89d15f62be78afdb28301064daa49ea3f4ebde5dcedad2" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:90e4b57649896acb16c3dd41b3093df1a169c2f1d94ff15d76af86b8a60dcdac" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-win32.whl", hash = "sha256:38dea43c7926d8800405a73b80b9adfe81eb315fc6f2ac6885c77eb966634421" },
+    { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wandb/wandb-0.19.11-py3-none-win_amd64.whl", hash = "sha256:73402003c56ddc2198878492ab2bff55bb49bce5587eae5960e737d27c0c48f7" },
 ]
 
 [[package]]
@@ -2355,6 +2369,54 @@ dependencies = [
 sdist = { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wheel/wheel-0.46.1.tar.gz", hash = "sha256:fd477efb5da0f7df1d3c76c73c14394002c844451bd63229d8570f376f5e6a38" }
 wheels = [
     { url = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/wheel/wheel-0.46.1-py3-none-any.whl", hash = "sha256:f796f65d72750ccde090663e466d0ca37cd72b62870f7520b96d34cdc07d86d8" },
+]
+
+[[package]]
+name = "xql-offline"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "absl-py" },
+    { name = "d4rl" },
+    { name = "flax" },
+    { name = "gdown" },
+    { name = "gym" },
+    { name = "imageio" },
+    { name = "imageio-ffmpeg" },
+    { name = "jax" },
+    { name = "jaxlib", version = "0.3.15", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "sys_platform == 'darwin'" },
+    { name = "jaxlib", version = "0.3.15+cuda11.cudnn82", source = { registry = "https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/" }, marker = "sys_platform != 'darwin'" },
+    { name = "ml-collections" },
+    { name = "numpy" },
+    { name = "optax" },
+    { name = "scipy" },
+    { name = "tensorboard" },
+    { name = "tensorboardx" },
+    { name = "tensorflow-probability" },
+    { name = "tqdm" },
+    { name = "wandb" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "absl-py", specifier = ">=0.12.0" },
+    { name = "d4rl", git = "https://github.com/rail-berkeley/d4rl?rev=master" },
+    { name = "flax", specifier = ">=0.3.5" },
+    { name = "gdown", specifier = ">=3.12.2" },
+    { name = "gym", extras = ["mujoco-py"], specifier = "<=0.24.1" },
+    { name = "imageio", specifier = ">=2.9.0" },
+    { name = "imageio-ffmpeg", specifier = ">=0.4.3" },
+    { name = "jax", specifier = "<=0.3.15" },
+    { name = "jaxlib", specifier = "<=0.3.15" },
+    { name = "ml-collections", specifier = ">=0.1.0" },
+    { name = "numpy", specifier = ">=1.20.2,<1.24.4" },
+    { name = "optax", specifier = ">=0.0.6,<0.1.9" },
+    { name = "scipy", specifier = ">=1.6.0,<1.11.1" },
+    { name = "tensorboard", specifier = "<2.15" },
+    { name = "tensorboardx" },
+    { name = "tensorflow-probability", specifier = ">=0.14.1" },
+    { name = "tqdm", specifier = ">=4.60.0" },
+    { name = "wandb", specifier = "<0.19.12" },
 ]
 
 [[package]]
