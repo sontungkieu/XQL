@@ -1,10 +1,6 @@
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "xql-offline" 
-version = "0.1.0"  # Added this to fix the parse error
+version = "0.1.0"
 description = "Project generated from pinned requirements"
 readme = "README.md"
 authors = [{ name = "Your Name" }]
@@ -31,3 +27,10 @@ dependencies = [
     "wandb<0.19.12",
     "tensorboardX",
 ]
+
+# Removed [build-system] to skip editable install/build; uv sync will only install dependencies.
+# For local imports (e.g., from actor.py or wrappers/), use `uv run python script.py` or add current dir to PYTHONPATH.
+# If you need full editable package later, add back [build-system] and configure below:
+# [tool.setuptools.packages.find]
+# include = ["offline*"]  # Assume main package is 'offline'; adjust if needed
+# exclude = ["configs*", "reproduce*"]  # Exclude non-code dirs; include "wrappers*" if importing from it
