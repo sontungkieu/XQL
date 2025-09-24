@@ -1,0 +1,53 @@
+[project]
+name = "xql-online"  # Tên project phù hợp cho phần online
+version = "0.1.0"
+description = "Online RL experiments with XQL (GPU-enabled)"
+readme = "README.md"  # Nếu có file README ở online/
+authors = [{ name = "Your Name" }]
+license = "MIT"
+requires-python = ">=3.8,<3.10"  # Giữ tương thích với offline; điều chỉnh nếu cần
+
+dependencies = [
+    # PyTorch (GPU): Sử dụng --index-url khi sync để lấy CUDA 11.3 variant
+    "torch",
+    "torchvision",
+    "torchaudio",  # Thêm để đầy đủ; optional nếu không dùng audio
+
+    # NP Family
+    "numpy",
+    "scipy",
+    "networkx",
+    "scikit-image",
+
+    # IO
+    "imageio",
+    "pillow",
+    "pyyaml",
+    "cloudpickle",
+    "h5py",
+    "absl-py",
+    "pyparsing",
+
+    # Plotting
+    "tensorboard",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+
+    # Other
+    "pytest",
+    "tqdm",
+    "future",
+
+    # Pip section from YAML
+    "gym >= 0.12",
+    "dm_control",
+    "mujoco-py >= 2.1, < 2.2",
+]
+
+# Không có [build-system] để tránh build editable (tương tự offline); uv sync chỉ install deps.
+# Nếu cần editable install sau, thêm:
+# [build-system]
+# requires = ["setuptools>=61.0", "wheel"]
+# build-backend = "setuptools.build_meta"
+# Và config [tool.setuptools.packages.find] nếu có multiple top-level packages (như research/algs, etc.)
