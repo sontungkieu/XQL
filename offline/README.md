@@ -7,6 +7,7 @@
 These are the same setup instructions as in [Implicit Q-Learning](https://github.com/ikostrikov/implicit_q_learning).
 
 ```bash
+uv sync --extra-index-url https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/
 pip install --upgrade pip
 
 pip install -r requirements.txt
